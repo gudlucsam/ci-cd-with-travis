@@ -1,4 +1,5 @@
 pytest
+flake8
 pandas
 flask
 nltk
