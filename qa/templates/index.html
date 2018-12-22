@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Question Answering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #qaform {
+            width: 70%;
+            margin: 10% 0 0 10%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="qaform">
+        <h1 style="text-align: center;">Hey! I have a high IQ...Ask Me Any Question</h1>
+        <!-- form to enter question -->
+        <form action="http://localhost:8080/askme" method="POST">
+            <div class="form-group">
+                <label for="QuestionInput"><b>Enter Question: </b></label>
+                <input type="text" name="question" class="form-control" id="QuestionInput" placeholder="enter question">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <!-- answer paragraph -->
+        {% if predicted %}
+        <p style="margin-top: 4%;"> <b> Answer: </b> {{ predicted }} </p>
+        {% endif %}
+
+    </div>
+
+
+</body>
+
+</html>
