@@ -2,6 +2,8 @@ language: python
 install:
   - pip install -r requirements.txt
 # command to run tests
-script:
+scripts:
+  # unit test
   python -m pytest -v
+  # linting test
   flake8
