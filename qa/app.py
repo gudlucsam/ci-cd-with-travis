@@ -1,3 +1,4 @@
+import os
 from edit_distance import edit_dis
 from flask import Flask, render_template, request
 
@@ -18,4 +19,4 @@ def validate():
 
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(port=int(os.getenv('PORT', 5000)))
