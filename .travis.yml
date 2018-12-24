@@ -10,7 +10,7 @@ script:
   # unit test
   - python -m pytest -v
   # linting test
-  - flake8
+  # - flake8
 # after_success:
 #   - sh .travis/deploy_dockerhub.sh
 #   - test "$TRAVIS_BRANCH" = "master" && sh .travis/deploy_heroku.sh
