@@ -1,4 +1,3 @@
-FROM alpine:latest
 FROM ubuntu:latest
 MAINTAINER Samuel Atule "atulesamuel20@gmail.com"
 RUN apt-get update -y
